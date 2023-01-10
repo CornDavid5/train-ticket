@@ -42,11 +42,11 @@ public class CancelServiceImplTest {
         Response<Order> response = new Response<>(1, null, order);
         ResponseEntity<Response<Order>> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-service:12031/api/v1/orderservice/order/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re);
+                Mockito.contains("/api/v1/orderservice/order/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re);
         Response result = cancelServiceImpl.cancelOrder("order_id", "login_id", headers);
         Assert.assertEquals(new Response<>(0, "Order Status Cancel Not Permitted", null), result);
     }
@@ -57,22 +57,22 @@ public class CancelServiceImplTest {
         Response<Order> response = new Response<>(0, null, null);
         ResponseEntity<Response<Order>> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-service:12031/api/v1/orderservice/order/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re);
+                Mockito.contains("/api/v1/orderservice/order/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re);
         //mock getOrderByIdFromOrderOther()
         Order order = new Order();
         order.setStatus(6);
         Response<Order> response2 = new Response<>(1, null, order);
         ResponseEntity<Response<Order>> re2 = new ResponseEntity<>(response2, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re2);
+                Mockito.contains("/api/v1/orderOtherService/orderOther/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re2);
         Response result = cancelServiceImpl.cancelOrder("order_id", "login_id", headers);
         Assert.assertEquals(new Response<>(0, "Order Status Cancel Not Permitted", null), result);
     }
@@ -83,10 +83,10 @@ public class CancelServiceImplTest {
         HttpEntity requestEntity2 = new HttpEntity(notifyInfo, headers);
         ResponseEntity<Boolean> re = new ResponseEntity<>(true, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-notification-service:17853/api/v1/notifyservice/notification/order_cancel_success",
-                HttpMethod.POST,
-                requestEntity2,
-                Boolean.class)).thenReturn(re);
+                Mockito.contains("/api/v1/notifyservice/notification/order_cancel_success"),
+                Mockito.eq(HttpMethod.POST),
+                Mockito.eq(requestEntity2),
+                Mockito.eq(Boolean.class))).thenReturn(re);
         Boolean result = cancelServiceImpl.sendEmail(notifyInfo, headers);
         Assert.assertTrue(result);
     }
@@ -99,11 +99,11 @@ public class CancelServiceImplTest {
         Response<Order> response = new Response<>(1, null, order);
         ResponseEntity<Response<Order>> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-service:12031/api/v1/orderservice/order/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re);
+                Mockito.contains("/api/v1/orderservice/order/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re);
         Response result = cancelServiceImpl.calculateRefund("order_id", headers);
         Assert.assertEquals(new Response<>(0, "Order Status Cancel Not Permitted, Refound error", null), result);
     }
@@ -114,22 +114,22 @@ public class CancelServiceImplTest {
         Response<Order> response = new Response<>(0, null, null);
         ResponseEntity<Response<Order>> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-service:12031/api/v1/orderservice/order/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re);
+                Mockito.contains("/api/v1/orderservice/order/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re);
         //mock getOrderByIdFromOrderOther()
         Order order = new Order();
         order.setStatus(6);
         Response<Order> response2 = new Response<>(1, null, order);
         ResponseEntity<Response<Order>> re2 = new ResponseEntity<>(response2, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-order-other-service:12032/api/v1/orderOtherService/orderOther/" + "order_id",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<Order>>() {
-                })).thenReturn(re2);
+                Mockito.contains("/api/v1/orderOtherService/orderOther/order_id"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<Order>>() {
+                }))).thenReturn(re2);
         Response result = cancelServiceImpl.calculateRefund("order_id", headers);
         Assert.assertEquals(new Response<>(0, "Order Status Cancel Not Permitted", null), result);
     }
@@ -139,10 +139,10 @@ public class CancelServiceImplTest {
         Response response = new Response<>(1, null, null);
         ResponseEntity<Response> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-inside-payment-service:18673/api/v1/inside_pay_service/inside_payment/drawback/" + "userId" + "/" + "money",
-                HttpMethod.GET,
-                requestEntity,
-                Response.class)).thenReturn(re);
+                Mockito.contains("/api/v1/inside_pay_service/inside_payment/drawback/userId/money"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(Response.class))).thenReturn(re);
         Boolean result = cancelServiceImpl.drawbackMoney("money", "userId", headers);
         Assert.assertTrue(result);
     }
@@ -152,11 +152,11 @@ public class CancelServiceImplTest {
         Response<User> response = new Response<>();
         ResponseEntity<Response<User>> re = new ResponseEntity<>(response, HttpStatus.OK);
         Mockito.when(restTemplate.exchange(
-                "http://ts-user-service:12342/api/v1/userservice/users/id/" + "orderId",
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<Response<User>>() {
-                })).thenReturn(re);
+                Mockito.contains("/api/v1/userservice/users/id/orderId"),
+                Mockito.eq(HttpMethod.GET),
+                Mockito.eq(requestEntity),
+                Mockito.eq(new ParameterizedTypeReference<Response<User>>() {
+                }))).thenReturn(re);
         Response<User> result = cancelServiceImpl.getAccount("orderId", headers);
         Assert.assertEquals(new Response<User>(null, null, null), result);
     }

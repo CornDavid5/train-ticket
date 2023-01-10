@@ -2,6 +2,7 @@ package plan.service;
 
 import edu.fudan.common.entity.Trip;
 import edu.fudan.common.entity.TripResponse;
+import edu.fudan.common.entity.TripAllDetail;
 import edu.fudan.common.util.Response;
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,7 +20,6 @@ import edu.fudan.common.entity.RoutePlanInfo;
 import edu.fudan.common.entity.Route;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 @RunWith(JUnit4.class)
 public class RoutePlanServiceImplTest {
@@ -75,22 +75,24 @@ public class RoutePlanServiceImplTest {
     public void testSearchMinStopStations() {
         RoutePlanInfo info = new RoutePlanInfo("form_station", "to_station", "", 1);
 
-        Response<String> response = new Response(null, null, "");
-        ResponseEntity<Response<String>> re = new ResponseEntity<>(response, HttpStatus.OK);
-
         ArrayList<Route> routeArrayList = new ArrayList<>();
-        Response<ArrayList<Route>> response2 = new Response<>(null, null, routeArrayList);
-        ResponseEntity<Response<ArrayList<Route>>> re2 = new ResponseEntity<>(response2, HttpStatus.OK);
+        Response<ArrayList<Route>> response = new Response<>(null, null, routeArrayList);
+        ResponseEntity<Response<ArrayList<Route>>> re = new ResponseEntity<>(response, HttpStatus.OK);
 
         ArrayList<ArrayList<Trip>> tripLists = new ArrayList<>();
-        Response<ArrayList<ArrayList<Trip>>> response3 = new Response<>(null, null, tripLists);
-        ResponseEntity<Response<ArrayList<ArrayList<Trip>>>> re3 = new ResponseEntity<>(response3, HttpStatus.OK);
+        Response<ArrayList<ArrayList<Trip>>> response2 = new Response<>(null, null, tripLists);
+        ResponseEntity<Response<ArrayList<ArrayList<Trip>>>> re2 = new ResponseEntity<>(response2, HttpStatus.OK);
+
+        TripAllDetail tripAllDetail = new TripAllDetail();
+        Response<TripAllDetail> response3 = new Response<>(null, null, tripAllDetail);
+        ResponseEntity<Response<TripAllDetail>> re3 = new ResponseEntity<>(response3, HttpStatus.OK);
+
         Mockito.when(restTemplate.exchange(
                 Mockito.anyString(),
                 Mockito.any(HttpMethod.class),
                 Mockito.any(HttpEntity.class),
                 Mockito.any(ParameterizedTypeReference.class)))
-                .thenReturn(re).thenReturn(re).thenReturn(re2).thenReturn(re3).thenReturn(re3);
+                .thenReturn(re).thenReturn(re2).thenReturn(re2).thenReturn(re2).thenReturn(re3);
         Response result = routePlanServiceImpl.searchMinStopStations(info, headers);
         Assert.assertEquals("Success.", result.getMsg());
     }
