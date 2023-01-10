@@ -16,7 +16,7 @@ imagePullPolicy: IfNotPresent
 # fullnameOverride: ""
 
 # Please donot modify `replicaCount`, after the cluster is created. 
-replicaCount: 3
+replicaCount: 1
 
 busybox:
   image: busybox
@@ -73,7 +73,7 @@ mysql:
       memory: 256Mi
       cpu: 100m
     limits:
-      memory: 1Gi
+      memory: 512Mi
       cpu: 500m
 
 xenon:

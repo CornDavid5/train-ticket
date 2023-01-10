@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   podManagementPolicy: OrderedReady
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -27,7 +27,7 @@ spec:
         - name: k8snacos
           env:
             - name: NACOS_REPLICAS
-              value: "3"
+              value: "1"
             - name: NACOS_SERVER_PORT
               value: "8848"
             - name: NACOS_APPLICATION_PORT
@@ -37,7 +37,8 @@ spec:
             - name: MODE
               value: cluster
             - name: NACOS_SERVERS
-              value: "{{ .Release.Name }}-0.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}} {{ .Release.Name }}-1.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}} {{ .Release.Name }}-2.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}}"
+              # value: "{{ .Release.Name }}-0.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}} {{ .Release.Name }}-1.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}} {{ .Release.Name }}-2.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}}"
+              value: "{{ .Release.Name }}-0.{{ .Values.nacos.headlessService }}.{{ .Release.Namespace }}.svc.{{ .Values.nacos.domainName }}:{{ .Values.nacos.serverPort}}"
           envFrom:
             - secretRef:
                 name: {{ .Values.nacos.secretName }}
