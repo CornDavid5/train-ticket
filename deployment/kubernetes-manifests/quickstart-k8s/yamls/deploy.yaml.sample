@@ -29,10 +29,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18767
@@ -71,10 +71,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16112
@@ -113,10 +113,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16113
@@ -155,10 +155,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16114
@@ -197,10 +197,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16115
@@ -241,10 +241,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18888
@@ -285,10 +285,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12340
@@ -327,10 +327,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 17001
@@ -369,10 +369,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 15680
@@ -411,10 +411,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18885
@@ -455,10 +455,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 15679
@@ -499,10 +499,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16110
@@ -543,10 +543,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16111
@@ -587,10 +587,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12347
@@ -633,10 +633,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18808
@@ -675,10 +675,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12386
@@ -721,10 +721,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18856
@@ -765,10 +765,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18957
@@ -807,10 +807,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18888
@@ -851,10 +851,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18673
@@ -893,10 +893,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12862
@@ -939,10 +939,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 17853
@@ -985,10 +985,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12032
@@ -1031,10 +1031,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12031
@@ -1075,10 +1075,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 19001
@@ -1119,10 +1119,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 14569
@@ -1163,10 +1163,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 14568
@@ -1207,10 +1207,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16579
@@ -1251,10 +1251,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18886
@@ -1293,10 +1293,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 14578
@@ -1337,10 +1337,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 11178
@@ -1379,10 +1379,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18898
@@ -1423,10 +1423,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 11188
@@ -1467,10 +1467,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 18855
@@ -1511,10 +1511,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12345
@@ -1555,10 +1555,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16108
@@ -1599,10 +1599,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 19999
@@ -1643,10 +1643,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 14567
@@ -1685,10 +1685,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 14322
@@ -1729,10 +1729,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12346
@@ -1773,10 +1773,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16346
@@ -1817,10 +1817,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 12342
@@ -1859,10 +1859,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 15678
@@ -1903,10 +1903,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 16101
@@ -1947,10 +1947,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 300Mi
+              memory: 150Mi
             limits:
               cpu: 500m
-              memory: 2000Mi
+              memory: 512Mi
           readinessProbe:
             tcpSocket:
               port: 17525
