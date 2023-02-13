@@ -15,7 +15,7 @@ imagePullPolicy: IfNotPresent
 ##
 # fullnameOverride: ""
 
-# Please donot modify `replicaCount`, after the cluster is created.
+# Please donot modify `replicaCount`, after the cluster is created. 
 replicaCount: 1
 
 busybox:
